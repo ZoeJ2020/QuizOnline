@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - MusicOnline</title>
+
+    <link rel="stylesheet" href="/style/welcome.css">
+    <link rel="stylesheet" href="/style/quiz.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/bcbcfe0164.js" crossorigin="anonymous"></script>
+</head>
+<body onload="loadQuizName()">
+    <!-- welcome message start -->
+    <div class="header">
+        <div class="welcome-div">
+            <div id="date">Date</div>
+            <span id="welcome-msg"></span>
+            <a href="index.html">Log out</a>
+        </div>
+    </div> 
+
+    <!-- welcome message end -->
+    <div class="quiz-header">
+        <h1 id="header"></h1>
+    </div>
+
+    <!-- quiz interface begin -->
+    <div id="quiz-interface">
+        <h2 id="question"></h2>
+        <div class="question-interface">
+            <span id="quiz-question"></span>
+            <span id="question-result"></span>
+        </div>
+        <div class="user-interface-container">
+            <div class="answer-container">
+                <div class="option" id="option-1">option</div>
+                <div class="option" id="option-2">option</div>
+                <div class="option" id="option-3">option</div>
+                <div class="option" id="option-4">option</div>
+            </div>
+            <button class="answer-handler-btns" id="submit-button">Submit</button>
+            <button class="answer-handler-btns" id="next-button">Next</button>
+        </div>
+
+        <span id="button-err"></span>    
+    </div>
+
+    <!-- quiz result section -->
+    <div id="quiz-result">
+        <p id="fullMark">Full Marks! Clever cookie</p>
+        <a class="back-btn" href="menu.html">Back</button>
+    </div>
+
+    <script src="/script/quiz.js"></script>
+    <script src="/script/cookies.js"></script>
+</body>
+</html>

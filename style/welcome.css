@@ -1,0 +1,72 @@
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.header{
+    background-image: linear-gradient(to bottom left, #00D1FF, #0CFC88);
+}
+
+
+.welcome-div{
+    text-align: center;
+    padding: 3% 0;
+}
+
+.tabs{
+    border: none;
+    background-color: rgb(206, 206, 206);
+    font-size: 15px;
+    padding: 0.5% 1%;
+
+    border: 1px solid rgb(206, 206, 206);
+    border-bottom: none;
+
+    transition: 200ms;
+}
+
+.tabs:hover{
+    background-color: white;
+    padding: 0.5% 3%;
+
+    border: 1px solid rgb(255, 255, 255);
+    border-bottom: none;
+
+    cursor: pointer;
+}
+
+.active{
+    background-color: white;
+    padding: 0.5% 3%;
+
+    border: 1px solid rgb(216, 199, 172);
+    border-bottom: none;
+}
+
+#welcome-msg
+{
+    font-size: 30px;
+    font-family: 'Ovo', serif;
+    background-color: transparent;
+    color: rgb(17, 36, 61);
+}
+
+h1{
+    font-family: 'Ovo', serif;
+    font-weight: 300;
+    text-align: left;
+}
+
+#date{
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    font-weight: 200;
+    margin-bottom: 12px;
+}
+
+a{
+    background-color: transparent;
+    color: grey;
+    padding-left: 1%;
+}

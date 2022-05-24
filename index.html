@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - MusicOnline</title>
+
+    <link rel="stylesheet" href="style/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="login">
+        <img src="/style/images/logo.png" alt="QuizOnline">
+
+        <div class="form-wrap">
+                <div class="inputBox">
+                    <label for="userEmail">email</label>
+                    <input type="email" id="userEmail">
+                    <span id="emailError"></span>
+                </div>
+                <div class="inputBox">
+                    <label for="userName">username</label>
+                    <input type="text" id="userName">
+                    <span id="userError"></span>
+                </div>
+                <button onclick="userValidate()">Enter</button>
+        </div>
+        <script src="/script/cookies.js"></script>
+        <script src="/script/index.js"></script>
+</body>
+</html>

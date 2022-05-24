@@ -1,0 +1,82 @@
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(/style/images/indexBG.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+    text-align: center;
+}
+
+.login{
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    padding: 2%;
+
+    border: 4px solid rgb(221, 221, 221);
+    border-radius: 5%;
+
+    box-shadow: 9px 9px 10px rgba(0, 0, 0, 0.24);
+}
+
+img{
+    justify-content: center;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+input, label{
+    display: block;
+    text-align: left;
+}
+
+label{
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+input{
+    padding: 2px 0;
+    margin: 2px 0 5px;
+}
+
+.form-wrap{
+    display: inline-block;
+}
+
+button{
+    transition: 200ms;
+    background-color: #65cfb3;
+    color: #fff;
+
+    border: 3px solid #5dbea5;
+    border-radius: 6px;
+    padding: 4px 38px;
+    margin: 12px 0;
+    box-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.137);
+
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #87e7ce;
+    border: 3px solid #6fdfc3;
+}
+
+button:active
+{
+    box-shadow: none;
+}

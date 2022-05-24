@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - MusicOnline</title>
+
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/welcome.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/bcbcfe0164.js" crossorigin="anonymous"></script>
+</head>
+<body onload="welcomeMessage()">
+
+  <!-- header start -->
+  <div class="header">
+
+    <!-- welcome div -->
+    <div class="welcome-div">
+        <div id="date">Date</div>
+        <span id="welcome-msg"></span>
+        <a href="index.html">Log out</a>
+    </div>
+    <!-- welcome div end -->
+
+    <div class="tab-section">
+        <button class="tabs active" id="quizTab" onclick="loadTab('quiz')">Quizzes</button>
+        <button class="tabs" id="statTab" onclick="loadTab('stat')">Stats</button>
+    </div>
+  </div>
+  <!-- header end -->
+
+    <!-- quiz section -->
+    <div id="quiz-menu">
+        <h1>Available Quizzes</h1>
+        <div class="cards">
+            <div onclick="loadQuizPage('Physics')" class="card">
+              <div class="quiz-icon">
+                <i class="fa-solid fa-atom"></i> 
+              </div>
+              <span id="quizName">Physics</span>
+            </div>
+            
+            <div onclick="loadQuizPage('Arithmetic')" class="card">
+            <div class="quiz-icon">
+                <i class="fa-solid fa-calculator"></i> 
+            </div>
+              <span id="quizName">Arithmetic</span>
+        </div>
+            
+            <div onclick="loadQuizPage('Chemistry')" class="card">
+            <div class="quiz-icon">
+                <i class="fa-solid fa-flask-vial"></i> 
+            </div>
+               <span id="quizName">Chemistry</span>
+        </div>
+            
+            <div onclick="loadQuizPage('Geography')" class="card">
+            <div class="quiz-icon">
+                <i class="fa-solid fa-earth-americas"></i>                
+            </div>
+                <span id="quizName">Geography</span>
+        </div>
+
+            <div onclick="loadQuizPage('History')" class="card">
+            <div class="quiz-icon">
+                <i class="fa-solid fa-monument"></i>                
+            </div>
+                <span id="quizName">History</span>
+        </div>
+
+        </div>
+    </div>
+    <!-- quiz section end -->
+
+    <!-- stat section -->
+    <div id="stat-menu">
+        <h1>Statistics</h1>
+
+        <div class="stat-section">
+            <h2>Physics</h2>
+
+            <div class="stat-info">
+                <div>
+                    <span class="avgScore" id="physicsScore">score here</span>
+                    <h3>Average Score</h3>        
+                </div>
+            </div>
+            
+            <div class="prog-info">
+                <h3>Progress</h3>
+                <div class="progress">
+                    <div class="accuracyBar" id="physicsAccuracy"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-section">
+            <h2>Arithmetic</h2>
+
+            <div class="stat-info">
+                <div>
+                    <span  class="avgScore" id="arithmeticScore">score here</span>
+                    <h3>Average Score</h3>        
+                </div>
+            </div>
+            
+            <div class="prog-info">
+                <h3>Progress</h3>
+                <div class="progress">
+                    <div class="accuracyBar" id="arithmeticAccuracy"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-section">
+            <h2>Chemistry</h2>
+
+            <div class="stat-info">
+                <div>
+                    <span  class="avgScore" id="chemistryScore">score here</span>
+                    <h3>Average Score</h3>        
+                </div>
+            </div>
+            
+            <div class="prog-info">
+                <h3>Progress</h3>
+                <div class="progress">
+                    <div class="accuracyBar" id="chemistryAccuracy"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-section">
+            <h2>Geography</h2>
+
+            <div class="stat-info">
+                <div>
+                    <span  class="avgScore" id="geographyScore">score here</span>
+                    <h3>Average Score</h3>        
+                </div>
+            </div>
+            
+            <div class="prog-info">
+                <h3>Progress</h3>
+                <div class="progress">
+                    <div class="accuracyBar" id="geographyAccuracy"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stat-section">
+            <h2>History</h2>
+
+            <div class="stat-info">
+                <div>
+                    <span class="avgScore" id="historyScore">score here</span>
+                    <h3>Average Score</h3>        
+                </div>
+            </div>
+            
+            <div class="prog-info">
+                <h3>Progress</h3>
+                <div class="progress">
+                    <div class="accuracyBar" id="historyAccuracy"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script/cookies.js"></script>
+    <script src="/script/menu.js"></script>
+</body>
+</html>
