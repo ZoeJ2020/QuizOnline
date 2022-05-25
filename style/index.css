@@ -28,9 +28,9 @@ body{
 }
 
 img{
-    justify-content: center;
+    display: block;
     max-width: 80%;
-    height: auto;
+    margin: auto;
     margin-bottom: 15px;
 }
 
@@ -54,6 +54,11 @@ input{
     display: inline-block;
 }
 
+span{
+    font-weight: 200;
+    font-size: 14px;
+}
+
 button{
     transition: 200ms;
     background-color: #65cfb3;
@@ -62,7 +67,7 @@ button{
     border: 3px solid #5dbea5;
     border-radius: 6px;
     padding: 4px 38px;
-    margin: 12px 0;
+    margin: 10px 0;
     box-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.137);
 
     font-size: 18px;
