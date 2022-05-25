@@ -6,7 +6,7 @@ function loadQuizPage(x){
     checkCookie('quizName');
     setCookie('quizName', x, 365);
 
-    window.location.assign("/quiz.html");
+    window.location.assign("./quiz.html");
 }
 
 function getAvg(statName)
