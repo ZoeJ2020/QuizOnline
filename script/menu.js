@@ -64,7 +64,6 @@ function loadScoreAvg(quizName)
     document.getElementById(`${quizName}Score`).innerText= avg;
   } else {
     document.getElementById(`${quizName}Score`).innerText= 'Not Attempted';
-
   }
 }
 

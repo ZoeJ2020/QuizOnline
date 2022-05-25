@@ -15,6 +15,7 @@ function userValidate()
 
     if(validEmail == true)
     {
+      checkCookie('userName');
       loadUser();
     } else
     {
