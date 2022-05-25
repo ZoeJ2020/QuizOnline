@@ -65,7 +65,7 @@ function userValidate()
 
 function loadUser()
 {
-  window.location.replace("/menu.html");
+  window.location.replace("/QuizOnline/menu.html");
 }
 
 // if 
