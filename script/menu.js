@@ -24,7 +24,7 @@ function getAvg(statName)
 
     scoreAvg = scoreAvg/scoreArr.length;
 
-    return scoreAvg;
+    return Math.round(scoreAvg * 10) / 10;
   } else
   {
     return null;
@@ -62,6 +62,8 @@ function loadScoreAvg(quizName)
   let avg = getAvg(quizName);
   if(avg){
     document.getElementById(`${quizName}Score`).innerText= avg;
+    document.getElementById(`${quizName}Score`).style.fontSize= '25px';
+    document.getElementById(`${quizName}Score`).style.fontWeight= '600';
   } else {
     document.getElementById(`${quizName}Score`).innerText= 'Not Attempted';
   }

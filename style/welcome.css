@@ -16,11 +16,11 @@
 
 .tabs{
     border: none;
-    background-color: rgb(206, 206, 206);
+    background-color: rgb(221, 221, 221);
     font-size: 15px;
     padding: 0.5% 1%;
 
-    border: 1px solid rgb(206, 206, 206);
+    border: 1px solid rgb(221, 221, 221);
     border-bottom: none;
 
     transition: 200ms;
@@ -69,4 +69,18 @@ a{
     background-color: transparent;
     color: grey;
     padding-left: 1%;
+}
+
+footer{
+    background-color: rgb(221, 221, 221);
+    color: black;
+    text-align: center;
+
+    padding: 3%;
+}
+
+footer > h4{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
 }

@@ -120,58 +120,58 @@ const ArithmeticQuestions = [
 const ChemistryQuestions = [
     {
         id: 0,
-        q: "Select A",
+        q: "which of these is the symbol for Hydrogen?",
         choices: [
-            "A",
-            "B",
-            "C",
-            "D"
+            "H2",
+            "CH4",
+            "NH3",
+            "H2O"
         ],
-        answer: "A"
+        answer: "H2"
     },
     {
         id: 1,
-        q: "Select D",
+        q: "An atom of sodium will ___ an electron and form a ___ ion.",
         choices: [
-            "A",
-            "B",
-            "C",
-            "D"
+            "gain, negative",
+            "gain, positive",
+            "lose, positive",
+            "lose, negative"
         ],
-        answer: "D"
+        answer: "lose, positive"
     },
     {
         id: 2,
-        q: "Select B",
+        q: "Magnesium has which electron arrangement?",
         choices: [
-            "A",
-            "B",
-            "C",
-            "D"
+            "2,8,2",
+            "2,8,7",
+            "3,4,3",
+            "5,7,6"
         ],
-        answer: "B"
+        answer: "2,8,2"
     },
     {
         id: 3,
-        q: "Select C",
+        q: "Alkali metals are found in which element group?",
         choices: [
-            "A",
-            "B",
-            "C",
-            "D"
+            "Group 7",
+            "Group 1",
+            "Group 0",
+            "Group 2/3"
         ],
-        answer: "C"
+        answer: "Group 1"
     },
     {
         id: 4,
-        q: "Select A",
+        q: "Halogens are found in which element group?",
         choices: [
-            "A",
-            "B",
-            "C",
-            "D"
+            "Group 1",
+            "Group 0",
+            "Group 2/3",
+            "Group 7"
         ],
-        answer: "A"
+        answer: "Group 7"
     }
 ]
 
@@ -429,7 +429,6 @@ function loadResults(objectName, score)
 function loadQuestion(id, objectName){
     // reset selected and button display
     const nextButton = document.getElementById('next-button');
-    const submitButton = document.getElementById('submit-button');
 
     if(id == 4)
     {
@@ -437,7 +436,6 @@ function loadQuestion(id, objectName){
     }
 
     nextButton.style.display='none';
-    submitButton.style.display='block';
 
     //change question number
     document.getElementById('question').innerText=`Question ${id+1}`
@@ -460,10 +458,10 @@ function loadQuestion(id, objectName){
     const op3 = document.getElementById('option-3');
     const op4 = document.getElementById('option-4');
 
-    op1.style.backgroundColor="white";
-    op2.style.backgroundColor="white";
-    op3.style.backgroundColor="white";
-    op4.style.backgroundColor="white";
+    op1.style.color="black";
+    op2.style.color="black";
+    op3.style.color="black";
+    op4.style.color="black";
 
     //set choice text
     op1.innerText = objectName[id].choices[0]; 
@@ -474,46 +472,36 @@ function loadQuestion(id, objectName){
     //get answer value
     opAnswer = objectName[id].answer;
 
-    let selected = "";
-
     // on button click, change colour and selected button
-    op1.addEventListener('click', () => {
-        op1.style.backgroundColor="rgb(11, 156, 122)";
-        op2.style.backgroundColor="white";
-        op3.style.backgroundColor="white";
-        op4.style.backgroundColor="white";
-
-        selected = op1;
+    op1.addEventListener('click', function(){
+        submitFunction(op1);
     })
 
-    op2.addEventListener('click', () => {
-        op1.style.backgroundColor="white";
-        op2.style.backgroundColor="rgb(11, 156, 122)";
-        op3.style.backgroundColor="white";
-        op4.style.backgroundColor="white";
-
-        selected = op2;
+    op2.addEventListener('click', function(){
+        submitFunction(op2);
     })
 
-    op3.addEventListener('click', () => {
-        op1.style.backgroundColor="white";
-        op2.style.backgroundColor="white";
-        op3.style.backgroundColor="rgb(11, 156, 122)";
-        op4.style.backgroundColor="white";
-
-        selected = op3;
+    op3.addEventListener('click', function(){
+        submitFunction(op3);
     })
 
-    op4.addEventListener('click', () => {
-        op1.style.backgroundColor="white";
-        op2.style.backgroundColor="white";
-        op3.style.backgroundColor="white";
-        op4.style.backgroundColor="rgb(11, 156, 122)";
-
-        selected = op4;
+    op4.addEventListener('click', function(){
+        submitFunction(op4);
     })
     
-    function submitFunction()
+    function getCorrectAns(opAnswer){
+        for(i=1; i<5; i++)
+        {
+            let option = document.getElementById(`option-${i}`);
+
+            if(option.innerText == opAnswer)
+            {
+                option.style.color="rgb(53, 222, 53)";
+            }
+        }
+    }
+
+    function submitFunction(selected)
     {
         //when submit button is clicked, return answer
         if(selected)
@@ -525,29 +513,24 @@ function loadQuestion(id, objectName){
             {
                 result.innerText="Correct! +1";
                 result.style.color="green";
-                selected.style.backgroundColor="green";
+                selected.style.color="green";
 
                 nextButton.style.display='block';
-                submitButton.style.display='none';
                 score++;
-        
-                // remove event listener for next function load
-                submitButton.removeEventListener('click', submitFunction);
             } else
             {
                 result.innerText="Incorrect!";
                 result.style.color="red";
-                selected.style.backgroundColor="red";
+                selected.style.color="red";
+                getCorrectAns(opAnswer);
 
                 nextButton.style.display='block';
-                submitButton.style.display='none';
-                
-                // remove event listener for next function load
-                submitButton.removeEventListener('click', submitFunction);
-            }    
-        } else
-        {
-            buttonErr.innerText="Please select an answer."
+            } 
+
+            op1.replaceWith(op1.cloneNode(true));
+            op2.replaceWith(op2.cloneNode(true));
+            op3.replaceWith(op3.cloneNode(true));
+            op4.replaceWith(op4.cloneNode(true));    
         }
     }
 
@@ -568,6 +551,5 @@ function loadQuestion(id, objectName){
     }
 
     //event listeners for each button
-    submitButton.addEventListener('click', submitFunction);
     nextButton.addEventListener('click', nextFunction);
 }
