@@ -363,6 +363,20 @@ function loadResults(objectName, score)
     userScore.innerText=`${score}/5`;
     document.body.insertBefore(userScore, resultDiv);
 
+    const userMark = document.createElement('p');
+    userMark.classList.add('mark');
+
+    if(score < 3)
+    {
+        userMark.innerText=`Fail`;
+        userMark.style.color=`red`;
+    } else
+    {
+        userMark.innerText=`Pass`;
+        userMark.style.color=`green`;
+    }
+    document.body.insertBefore(userMark, resultDiv);
+
     if(score == 5) // if full marks, display full mark message
     {
         document.getElementById('fullMark').style.display="block";

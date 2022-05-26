@@ -106,6 +106,13 @@ button:active
     font-weight: 600;
 }
 
+.mark{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300; 
+    margin-top: 3%;
+}
+
 .crrtDiv{
     margin: 7% 6%;
 }

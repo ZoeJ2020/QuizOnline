@@ -49,4 +49,8 @@ function loadUser()
   window.location.replace("./menu.html");
 }
 
-// if 
+function displayDate()
+{
+  const date = new Date();
+  document.getElementById('date').innerText=date;
+}

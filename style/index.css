@@ -11,6 +11,11 @@ body{
     text-align: center;
 }
 
+#date{
+    color: white;
+    font-weight: 600;
+}
+
 .login{
     background-color: #fff;
     position: absolute;
