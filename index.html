@@ -5,20 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In - MusicOnline</title>
+
+    <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="style/images/favicon.ico">
+    <!-- favicon end-->
 
+    <!-- stylesheets -->
     <link rel="stylesheet" href="style/index.css">
+    <!-- stylesheets end -->
 
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <!-- google fonts end-->
 </head>
 <body onload="displayDate()">
     <span id="date">Date</span>
     <div class="login">
         <img src="style/images/logo.png" alt="QuizOnline">
 
+        <!-- form section -->
         <div class="form-wrap">
+
+            <!-- input area -->
                 <div class="inputBox">
                     <label for="userEmail">email</label>
                     <input type="email" id="userEmail">
@@ -30,8 +40,14 @@
                     <span id="userError"></span>
                 </div>
                 <button onclick="userValidate()">Enter</button>
+            <!-- input area end-->
+
         </div>
+        <!-- form section end -->
+
+        <!-- scripts list -->
         <script src="script/cookies.js"></script>
         <script src="script/index.js"></script>
+        <!-- scripts list end -->
 </body>
 </html>
