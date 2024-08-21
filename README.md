@@ -15,4 +15,4 @@ You should now be able to access the live app at https://zoej2020.github.io/Quiz
 
 - **JavaScript** - For quiz functionality and keeping track of the user's progress.
 - **HTML** - For creating pages and interactive elements.
-- **CSS** + **Bootstrap** - For responsive design and customization of Bootstrap classes.
+- **CSS** - For responsive design.
